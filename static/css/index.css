@@ -1,0 +1,236 @@
+.units-row:after {
+    content: "";
+    display: table;
+    clear: both;
+}
+
+.units-row {
+    margin-bottom: 1.6em;
+}
+
+.unit-centered {
+    float: none !important;
+    margin: 0 auto !important;
+}
+
+.width-100,
+.unit-100 {
+    width: 100%;
+}
+
+.width-50,
+.unit-50 {
+    width: 50%;
+}
+
+.units-row .unit-50 {
+    width: 47.5%;
+}
+
+.units-row .unit-50 {
+    float: left;
+    margin-left: 3%;
+}
+
+.units-row .unit-50:first-child {
+    margin-left: 0;
+}
+
+.w960 {
+    width: 96%;
+}
+
+.top_plus {
+    padding-top: 30px;
+}
+
+.logo {
+    width: 176px;
+    height: 50px;
+    background: url(//cdn-img.easyicon.net/image/2019/easyicon-logo.svg) no-repeat;
+    margin-left: 2%;
+}
+
+.logo a {
+    display: block;
+    width: 176px;
+    height: 50px;
+}
+
+.sbox {
+    width: 767px;
+    height: 150px;
+    padding-top: 5%;
+}
+
+.header_logo {
+    width: 163px;
+    height: 185px;
+    background: url(../imgs/logo.png) no-repeat;
+    margin-bottom: -11px !important;
+}
+
+.header_logo a {
+    display: block;
+    width: 163px;
+    height: 185px;
+}
+
+.tall {
+    position: absolute;
+    z-index: 3000;
+    display: none;
+}
+
+.tall a {
+    background: #F30;
+    color: #FFF
+}
+
+.tall a:hover {
+    color: #eee !important;
+}
+
+.footer {
+    position: absolute;
+    bottom: 10%;
+}
+
+.inputstyle {
+    font-size: 16px;
+}
+
+.fix-footer {
+    position: fixed;
+    bottom: 14px;
+    font-size: 12px;
+    height: 30px;
+    color: #999;
+}
+
+.fix-footer a:hover {
+    color: #41b34d
+}
+
+.links-left {
+    text-align: left;
+    float: left;
+    width: 45%;
+    height: 30px;
+    margin-left: 15px;
+}
+
+.copyright-right {
+    text-align: right;
+    float: right;
+    width: 45%;
+    height: 30px;
+    margin-right: 15px;
+}
+
+.links-left a {
+    margin-right: 9px;
+    margin-left: 9px;
+    color: #999;
+}
+
+.copyright-right a, .copyright-right span {
+    margin-right: 9px;
+    margin-left: 9px;
+    color: #999;
+}
+
+.today-update em {
+    color: #fff !important;
+    font-style: normal;
+    background: #F30;
+    color: #fff;
+    padding: 0 3px 0 3px;
+    margin-left: 3px;
+    margin-bottom: -1px;
+    -webkit-border-radius: 3px;
+    -moz-border-radius: 3px;
+    -ms-border-radius: 3px;
+    -o-border-radius: 3px;
+    border-radius: 3px;
+}
+
+.question-list {
+    list-style: none;
+    padding-top: 10px;
+}
+
+.question-list li {
+    height: 60px;
+    margin: 1px;
+    line-height: 60px;
+    padding-left: 20px;
+    padding-right: 20px;
+    background: white;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+    transition: 0.3s;
+    width: 100%;
+    border-radius: 5px;
+    margin-bottom: 5px;
+    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+    font-size: 20px;
+}
+
+.question-list li:hover {
+    box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2);
+    background: #fafafa;
+}
+
+.outer-container {
+    overflow: hidden;
+}
+
+.inner-container {
+    overflow-x: hidden;
+    overflow-y: scroll;
+}
+
+/* for Chrome */
+.inner-container::-webkit-scrollbar {
+    display: none;
+}
+
+@media (min-device-width: 320px) and (max-device-width: 667px) and (-webkit-min-device-pixel-ratio: 2) {
+    .sbox, .search_box, .sinput {
+        width: 100%
+    }
+
+    .btn-append, .fix-footer {
+        display: none
+    }
+
+    .header_logo {
+        width: 103px;
+        height: 125px;
+    }
+
+    .sbox {
+        padding-top: 25%;
+    }
+}
+
+/* iphone6 plus */
+
+@media (min-device-width: 414px) and (max-device-width: 736px) and (-webkit-min-device-pixel-ratio: 3) {
+    .sbox, .search_box, .sinput {
+        width: 100%
+    }
+
+    .btn-append, .fix-footer {
+        display: none
+    }
+
+    .header_logo {
+        width: 103px;
+        height: 125px;
+    }
+
+    .sbox {
+        padding-top: 25%;
+    }
+}

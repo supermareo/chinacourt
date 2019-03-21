@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link href="../static/css/complus.css" rel="stylesheet">
+    <link href="../static/css/index.css" rel="stylesheet">
+    <link href="../static/css/page.css" rel="stylesheet">
+    <link rel="stylesheet" href="../static/flavr/css/bootstrap.min.css"/>
+    <link rel="stylesheet" href="../static/flavr/css/style.css"/>
+    <link rel="stylesheet" href="../static/flavr/css/animate.css"/>
+    <link rel="stylesheet" href="../static/flavr/css/flavr.css"/>
+    <link rel="stylesheet" href="../static/css/loading.css">
+    <script src="../static/js/jquery-3.3.1.js"></script>
+    <script type="text/javascript" src="../static/flavr/js/flavr.min.js"></script>
+</head>
+<body>
+<div class="unit-centered units-row w960">
+    <div class="unit-100">
+        <div class="sbox unit-centered">
+            <div class="header_logo unit-centered"></div>
+            <div class="search_box">
+                <label class="input-groups">
+                    <input class="sinput inputstyle" id="search_input"
+                           placeholder="输入你的问题...">
+                    <span class="btn-append">
+                        <button class="btn btn-red" id="search_btn">搜索问答</button>
+                    </span>
+                </label>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="unit-centered units-row w960">
+    <!--进度条-->
+    <div class="spinner" hidden id="loading">
+        <div class="rect1"></div>
+        <div class="rect2"></div>
+        <div class="rect3"></div>
+        <div class="rect4"></div>
+        <div class="rect5"></div>
+    </div>
+    <div class="unit-100" id="content">
+        <ol id="question-list" class="sbox unit-centered question-list">
+            <!--<li>哈哈哈哈</li>-->
+            <!--<li>哈哈哈哈</li>-->
+            <!--<span class="page-btn previous enable" disabled>&laquo; 上一页</span>-->
+            <!--<span class="page-btn next enable">下一页 &raquo;</span>-->
+        </ol>
+    </div>
+</div>
+<script src="../static/js/search.js"></script>
+</body>
+</html>
