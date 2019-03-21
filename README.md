@@ -9,7 +9,10 @@
 - [Welcome | Flask (A Python Microframework)](http://flask.pocoo.org/)
 
 ### 系统整体结构
-![系统结构图](imgs/系统结构图.png)
+![](imgs/系统结构图.png)
+
+### 代码简介
+![](imgs/代码功能.png)
 
 ### 主要技术
 - Flask框架
