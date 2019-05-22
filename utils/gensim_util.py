@@ -14,15 +14,18 @@ def tokenization(content):
 # dest 要对比的文本-用户输入的问题
 # src  相当于词典文本-爬取的问题列表
 def similarity(dest, src):
-    texts = [tokenization(content) for content in src]
-    dictionary = corpora.Dictionary(texts)
-    corpus = [dictionary.doc2bow(text) for text in texts]
-    new_doc = dest
-    new_vec = dictionary.doc2bow(tokenization(new_doc))
-    tfidf = models.TfidfModel(corpus)  # 建立tf-idf模型
-    index = similarities.MatrixSimilarity(tfidf[corpus], num_features=len(dictionary))  # 对整个语料库进行转换并编入索引，准备相似性查询
-    sims = index[tfidf[new_vec]]  # 查询每个文档的相似度
-    sims = list(enumerate(sims))
+    try:
+        texts = [tokenization(content) for content in src]
+        dictionary = corpora.Dictionary(texts)
+        corpus = [dictionary.doc2bow(text) for text in texts]
+        new_doc = dest
+        new_vec = dictionary.doc2bow(tokenization(new_doc))
+        tfidf = models.TfidfModel(corpus)  # 建立tf-idf模型
+        index = similarities.MatrixSimilarity(tfidf[corpus], num_features=len(dictionary))  # 对整个语料库进行转换并编入索引，准备相似性查询
+        sims = index[tfidf[new_vec]]  # 查询每个文档的相似度
+        sims = list(enumerate(sims))
+    except Exception:
+        return []
     result = []
     for index, weight in sims:
         # 去掉相似度为0的

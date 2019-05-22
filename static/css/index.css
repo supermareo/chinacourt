@@ -176,6 +176,23 @@
     font-size: 20px;
 }
 
+.question-list span {
+    height: 60px;
+    margin: 1px;
+    line-height: 60px;
+    padding-left: 20px;
+    padding-right: 20px;
+    background: white;
+    transition: 0.3s;
+    width: 100%;
+    border-radius: 5px;
+    margin-bottom: 5px;
+    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+    font-size: 20px;
+    text-align: center;
+    display: inline-block;
+}
+
 .question-list li:hover {
     box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2);
     background: #fafafa;

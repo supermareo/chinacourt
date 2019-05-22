@@ -32,6 +32,7 @@ function doSearch(question) {
         url: '/search/' + question,
         beforeSend: function (xhr) {
             console.log('before send');
+            $('#empty-content').hide();
             $('#content').hide();
             $('#loading').show();
         },
@@ -46,7 +47,6 @@ function doSearch(question) {
         complete: function (xhr, status) {
             console.log('complete', status, xhr);
             $('#loading').hide();
-            $('#content').show();
         }
     });
 }
@@ -54,6 +54,15 @@ function doSearch(question) {
 function refreshQuestionList() {
     totalCount = questionList.length;
     console.log('total length', length);
+    if (totalCount === 0) {
+        $('#content').hide();
+        $('#empty-content').show();
+        return false;
+    } else {
+        $('#empty-content').hide();
+        $('#content').show();
+    }
+
     totalPages = Math.ceil(totalCount / 8);
     curPage = 0;
     showPage(curPage)
