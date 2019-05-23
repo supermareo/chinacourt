@@ -63,7 +63,7 @@ function refreshQuestionList() {
         $('#content').show();
     }
 
-    totalPages = Math.ceil(totalCount / 8);
+    totalPages = Math.ceil(totalCount / 7);
     curPage = 0;
     showPage(curPage)
 }
@@ -75,8 +75,8 @@ function showPage(pageNum) {
     }
     //清空列表
     $('#question-list').children().remove();
-    var start = pageNum * 8;
-    var end = start + 8;
+    var start = pageNum * 7;
+    var end = start + 7;
     end = end > totalCount ? totalCount : end;
     for (var i = start; i < end; i++) {
         var q = questionList[i];
@@ -88,8 +88,12 @@ function showPage(pageNum) {
     var preEnabled = preEnable === 'enable' ? '' : 'disabled';
     var nextEnabled = nextEnable === 'enable' ? '' : 'disabled';
     console.log('curPage', curPage, 'preEnable', preEnable, preEnabled, 'nextEnable', nextEnable, nextEnabled);
-    $('#question-list').append('<span onclick="prePageQuestion()" class="page-btn previous ' + preEnable + '" ' + preEnabled + '>&laquo; 上一页</span>');
-    $('#question-list').append('<span onclick="nextPageQuestion()" class="page-btn next ' + nextEnable + '" ' + nextEnabled + '>下一页 &raquo;</span>');
+    if (preEnable==='enable') {
+        $('#question-list').append('<span onclick="prePageQuestion()" class="page-btn previous ' + preEnable + '" ' + preEnabled + '>&laquo; 上一页</span>');
+    }
+    if (nextEnable==='enable') {
+        $('#question-list').append('<span onclick="nextPageQuestion()" class="page-btn next ' + nextEnable + '" ' + nextEnabled + '>下一页 &raquo;</span>');
+    }
 }
 
 function nextPageQuestion() {

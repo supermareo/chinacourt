@@ -17,12 +17,10 @@
 
 .enable {
     background-color: #e44c1d;
-    color: white;
 }
 
 .enable:hover {
     background-color: #d5471b;
-    color: white;
 }
 
 .round {
